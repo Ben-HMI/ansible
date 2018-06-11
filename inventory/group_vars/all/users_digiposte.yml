@@ -1,0 +1,36 @@
+sudo_commands_dsi: "{{ sudo_commands_root + sudo_commands_services }}"
+
+
+user_faye:
+
+  - username: faye
+    primary_group: digi-admin
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+user_habdoul:
+
+  - username: habdoul
+    primary_group: digi-admin
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+
+user_onaon:
+
+  - username: onaon
+    primary_group: digi-admin
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+
+users_didiposte: "{{ user_faye +
+user_habdoul +
+user_ onaon }}"
+
+user_devops:
+
+  - username: devops
+    primary_group: svcaccount
+    ssh_keys:
+     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAl4Nht4XZCFhoJODaJMyhQLGRcxScxwi9jvtU4vJ6aqETKEJzwdLGrc1uO4PJ+KLSh4FwTPtELbwy5gUVa4S4fHQSNInPPAC+OoTF4kU8qY0HnEr59RrbSFrRGZkZ/s7NUrVP7HTZun0Mtjg/5ieBGK/PMEjzLByDwNcGIs/jblOuUITsqLxWk3WXkr0fa8KOlQ6DQeTuHs7NgvCkFWW0Q85JyQWKnnJz7GV2R+4HCb3Vv37jM2+gHEe6YylRsfdRV3RmLdIGIG+gHKgDuy2qKeZmra0FFj3F8T2+Tv++fMMd/9TTBF0D1iAGbGFOZTTZFGppFYJUvuTfeRI+tsjL root@Akatsuki
+
+
+

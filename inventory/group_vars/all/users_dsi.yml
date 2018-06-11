@@ -1,0 +1,70 @@
+sudo_commands_dsi: "{{ sudo_commands_root + sudo_commands_services }}"
+
+users_dsi: "{{ users_infra }}"
+
+users_infra:
+
+  - username: btambaud
+    primary_group: infra
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+  - username: kterki
+    primary_group: infra
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+  - username: bbujon
+    primary_group: infra
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+  - username: bmaussion
+    primary_group: infra
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+  - username: dhertzsc
+    primary_group: infra
+    sudo_commands: "{{ sudo_commands_dsi }}"
+
+
+users_exploit:
+
+  - username: hmagino
+    primary_group: explot
+    sudo_commands: "{{ sudo_commands_exploit }}"
+
+  - username: mgracia
+    primary_group: exploit
+    sudo_commands: "{{ sudo_commands_exploit }}"
+
+  - username: bstevena
+    primary_group: explot
+    sudo_commands: "{{ sudo_commands_exploit }}"
+
+
+svc_account:
+
+  - username: lansweeper
+    primary_group: svcaccount
+    sudo_commands: "{{ sudo_commands_svcaccount }}"
+
+  - username: nagios
+    primary_group: svcaccount
+    sudo_commands: "{{ sudo_commands_svcaccount }}"
+
+  - username: devops
+    primary_group: svcaccount
+    ssh_keys:
+    
+
+user_btambaud:
+ - username: btambaud
+   primary_group: infra
+   sudo_commands: "{{ sudo_commands_dsi }}"
+
+
+user_mgracia:
+ - username: mgracia
+   primary_group: exploit
+   sudo_commands: "{{ sudo_commands_exploit }}"
+
+
+

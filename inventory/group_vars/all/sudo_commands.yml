@@ -1,0 +1,26 @@
+---
+
+sudo_commands_root:
+  - "/bin/su -"
+
+sudo_commands_services:
+  - "/usr/bin/systemctl"
+  - "/sbin/service"
+
+sudo_commands_lansweeper:
+  - "/usr/bin/dmidecode"
+
+sudo_commands_exploitation:
+  - "/bin/su - escnode"
+  - "/bin/su - cftuser"
+  - "/etc/init.d/*"
+  - "/usr/bin/tail"
+  - "/bin/ls"
+  - "/bin/cat"
+  - "/usr/bin/systemctl"
+  - "/usr/bin/du"
+  - "/bin/df"
+  - "/sbin/chkconfig"
+  - "/bin/zcat"
+  - "/bin/zmore"
+  - "/bin/gzip"

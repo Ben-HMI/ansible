@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  tasks:
+
+  - name: register home
+    shell: "ls /home/
+
+
+  -name: 
+   set_fact:
+       
